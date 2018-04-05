@@ -1,17 +1,22 @@
-# Path to your oh-my-zsh installation.
-#
-#
-export ZSH=/Users/Jimini/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="fletcherm"
+# Path to your oh-my-zsh installation.
+  export ZSH=/home/liveo/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="agnoster"
+
+# Set list of themes to load
+# Setting this variable when ZSH_THEME=random
+# cause zsh load theme from this variable instead of
+# looking in ~/.oh-my-zsh/themes/
+# An empty array have no effect
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-#
-#
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
@@ -53,14 +58,15 @@ ZSH_THEME="fletcherm"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -76,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -84,55 +90,41 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshc="vim ~/.zshrc"
- alias ohmyzsh="mate ~/.oh-my-zsh"
-alias apti='sudo apt-get install'
-alias aptu='sudo apt-get update'
-alias clr='clear'
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+plugins=(git colored-man-pages)
+plugins=(git zsh-syntax-highlighting)
+
+
+# Common commands
+alias q='exit'
 alias c='clear'
-
-#
-. `brew --prefix`/etc/profile.d/z.sh
-
-
-alias ssr="ssh root@139.162.62.149"
-alias ssl="ssh liveo@139.162.62.149"
-alias ssv="ssh dirkbek@10.211.55.21"
-
-alias gicl='git clone'
-alias gis='git status'
-alias gia='git add'
-alias gic='git commit -m'
-alias giph='git push'
-alias gipl='git pull'
-
-alias sni='sudo npm install'
-
-
-alias vi='vim' #_To get YouCompleteMe to work
-
-alias maint='sudo periodic daily weekly monthly'
-
-# Alias functions
-function apr
-{
-	apropos $1/*
-}
+alias h='history'
+alias cs='clear;ls'
+alias p='pwd'
+alias la='ls -a'
+alias ll='ls -l'
+alias t='time'
+alias k='kill'
+alias hm='cd ~'
+alias rt='cd /'
+alias dtop='cd ~/Desktop'
+alias down='cd ~/Download'
+alias docs='cd ~/Documents'
+alias proj='cd ~/Project'
+alias o=xdg-open 
+alias ..'cd ..'
+alias ..'cd ..; cd ..'
+alias ..'cd ..; cd ..'
+alias g='git'
+alias st='git status'
+alias com='git commit -m'
+alias clone='git clone'
+alias all='git add .'
+alias gps='git push master origin'
+alias gpl='git pull'
 alias soz='source ~/.zshrc'
-alias mywb='Google\ Drive\ School/@Company/Website/Personal/personalWeb'
-alias proj='/Users/Jimini/Library/Mobile Documents/com~apple~CloudDocs/3. Personal/3. Projects'
-
-alias lh='ls -Shla'
-
-alias port='sudo /opt/local/bin/port'
-
-# Path
-export PATH="/usr/local/mysql/bin:$PATH"
-
-# Problem with tmux2.2 
-export EVENT_NOKQUEUE=1 
-
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export PATH=/opt/local/bin:$PATH
+alias vimrc='vim ~/.vimrc'
+alias zshrc='vim ~/.zshrc'
+export EDITOR=vim
+alias ssl='ssh liveo@139.162.62.149'
