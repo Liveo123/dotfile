@@ -87,12 +87,6 @@ autocmd FileType html,css,ts EmmetInstall
 "Redfine trigger key to C-Z,
 let g:user_emmet_leader_key='<C-Z>'
 
-"---- Open NERDTree automatically ----"
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
-
-autocmd VimEnter * wincmd w
-
 "---- General Settings
 set backspace=indent,eol,start
 set ruler
@@ -117,30 +111,6 @@ set tabstop=4
 
 syntax on
 
-" Insert single character with space key
-:nnoremap <Space> i_<Esc>r
-
-" newline after current line
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
-
-" Jump to the end of the current line with C-e
-inoremap <C-e> <C-o>$
-
-set mouse=a
-
-" Stuff for Utltsnips
-" Track the engine.
-Plugin 'SirVer/ultisnips'
-
-" Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
@@ -153,3 +123,58 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+"" Other from here
+" General settings
+set backspace=indent,eol,start
+set ruler
+set number
+set showcmd
+set incsearch
+set hlsearch
+set mouse=a
+syntax on
+
+" Insert single character with space key
+:nnoremap <Space> i_<Esc>r
+
+" Stuff from youtube
+" https://www.youtube.com/watch?v=aHm36-na4-4&index=36&t=0s&list=WL
+
+" Don't forget to add VimCompleteMe
+
+" Adds a magenta color column to 81st column
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
+" Set : so you don't need shift
+nnoremap ; :
+nnoremap : ;
+
+" Set tabs to four spaces
+set tabstop=4
+set expandtab
+
+" Set hybrid line number - except when in insert mode
+set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
+" Press esc to clear search highlighting
+nnoremap <Esc> :noh<Return><Esc>
+
+
+
+
+
+
+
+
+
+
+
+
