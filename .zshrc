@@ -95,7 +95,6 @@ source $ZSH/oh-my-zsh.sh
 plugins=(git colored-man-pages)
 plugins=(git zsh-syntax-highlighting)
 
-
 # Common commands
 alias q='exit'
 alias c='clear'
@@ -112,7 +111,7 @@ alias dtop='cd ~/Desktop'
 alias down='cd ~/Download'
 alias docs='cd ~/Documents'
 alias proj='cd ~/Project'
-alias o=xdg-open 
+alias o=xdg-open
 alias ..'cd ..'
 alias ..'cd ..; cd ..'
 alias ..'cd ..; cd ..'
@@ -123,8 +122,12 @@ alias clone='git clone'
 alias all='git add .'
 alias gps='git push master origin'
 alias gpl='git pull'
+alias spi='sudo pip3 install'
+alias spi2='sudo pip2 install'
 alias soz='source ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
+alias sagi='sudo apt-get install'
 export EDITOR=vim
 alias ssl='ssh liveo@139.162.62.149'
+alias sup='sudo apt-get update && sudo apt-get -y upgrade'
