@@ -15,7 +15,7 @@ Plugin 'tomasr/molokai'
 Plugin 'bling/vim-airline'
 
 " -------------- Vim as a programmer's text editor -------
-Plugin 'scrooloose/nerdtree'
+"Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
 "Plugin 'jistr/vim-nerdtree-tabs'
@@ -43,7 +43,6 @@ Plugin 'tpope/vim-liquid'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
-
 "Plugin 'SirVer/Ultisnips'
 
 " All of your Plugins must be added before the following line
@@ -87,6 +86,12 @@ autocmd FileType html,css,ts EmmetInstall
 "Redfine trigger key to C-Z,
 let g:user_emmet_leader_key='<C-Z>'
 
+"HTML Autocomplete
+set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+
+
 "---- General Settings
 set backspace=indent,eol,start
 set ruler
@@ -112,17 +117,17 @@ set tabstop=4
 syntax on
 
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsEditSplit="vertical"
 
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 "" Other from here
 " General settings
@@ -165,16 +170,15 @@ set number relativenumber
 :augroup END
 
 " Press esc to clear search highlighting
-nnoremap <Esc> :noh<Return><Esc>
+"nnoremap <Esc> :noh<Return><Esc>
 
+" Debug ycm
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
+" Toggle word wrap with the following:
+" :set fo+=tc<CR>
+" :set fo-=tc<CR>
 
-
-
-
-
-
-
-
-
-
+set sr fo=roqm1 tw=64
+im <C-B> <C-O>:setl sr! fo<C-R>=strpart("-+",&sr,1)<CR>=tc<CR>_<BS><Right>
