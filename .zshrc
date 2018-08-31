@@ -7,7 +7,10 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="funky"
+
+# Include z
+. ~/Templates/z.sh
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -95,6 +98,9 @@ source $ZSH/oh-my-zsh.sh
 plugins=(git colored-man-pages)
 plugins=(git zsh-syntax-highlighting)
 
+# Swap eac and CAPS
+setxkbmap -layout us -option ctrl:nocaps
+
 # Common commands
 alias q='exit'
 alias c='clear'
@@ -120,7 +126,8 @@ alias st='git status'
 alias com='git commit -m'
 alias clone='git clone'
 alias all='git add .'
-alias gps='git push master origin'
+alias gad='git add'
+alias gps='git push origin master'
 alias gpl='git pull'
 alias spi='sudo pip3 install'
 alias spi2='sudo pip2 install'
@@ -128,6 +135,12 @@ alias soz='source ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 alias sagi='sudo apt-get install'
+alias sai='sudo apt install'
+alias sagu='sudo apt update'
 export EDITOR=vim
 alias ssl='ssh liveo@139.162.62.149'
 alias sup='sudo apt-get update && sudo apt-get -y upgrade'
+alias ssu='ssh -X plivesey3@buffet02.cc.gatech.edu'
+alias sa='source venv/bin/activate'
+alias venvy='python3 -m virualenv venv'
+alias srcvenv='source venv/bin/activate'
