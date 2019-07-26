@@ -17,20 +17,20 @@ ZSH_THEME="funky"
 # cause zsh load theme from this variable instead of
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+ export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -39,10 +39,10 @@ ZSH_THEME="funky"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -92,14 +92,30 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 plugins=(git colored-man-pages)
 plugins=(git zsh-syntax-highlighting)
 
+# ****** Add to path ********
+
+# Scala Activator
+export PATH="$PATH:/opt/activator"
+
+# export PIG_HOME=/home/edureka/pig-0.16.0
+export PATH=$PATH:/home/edureka/pig-0.16.0/bin
+export PIG_CLASSPATH=$HADOOP_CONF_DIR
+# ****** End to path *********
+
 # Swap eac and CAPS
 setxkbmap -layout us -option ctrl:nocaps
+
+# Set Ultisnips default folder
+# let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips/UltiSnips"
+
+# Set grep to color
+export GREP_OPTIONS='--color=auto'
+
+# Use vim commands in terminal
+# set -o vi
 
 # Common commands
 alias q='exit'
@@ -144,3 +160,12 @@ alias ssu='ssh -X plivesey3@buffet02.cc.gatech.edu'
 alias sa='source venv/bin/activate'
 alias venvy='python3 -m virualenv venv'
 alias srcvenv='source venv/bin/activate'
+alias evc='expressvpn connect'
+alias evd='expressvpn disconnect'
+alias evs='expressvpn status'
+alias ev='expressvpn'
+alias evl='expressvpn preferences set network_lock off'
+alias gsm='gnome system monitor'
+alias rai='cd ~/Dropbox/1. University/8. RAI/'
+alias kbai='cd ~/Dropbox/1. University/7. KBAI'
+
