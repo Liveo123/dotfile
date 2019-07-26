@@ -43,7 +43,11 @@ Plugin 'tpope/vim-liquid'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
-"Plugin 'SirVer/Ultisnips'
+Plugin 'SirVer/Ultisnips'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,8 +103,12 @@ set number
 set showcmd
 set incsearch
 set hlsearch
-set tabstop=4
 
+
+" tabs
+set expandtab
+set tabstop=3
+set shiftwidth=3
 " Word wrap
 :set nowrap
 ":set linebreak
@@ -117,17 +125,18 @@ set tabstop=4
 syntax on
 
 " If you want :UltiSnipsEdit to split your window.
-"let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsEditSplit="vertical"
 
 " make YCM compatible with UltiSnips (using supertab)
-"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-"let g:SuperTabDefaultCompletionType = '<C-n>'
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+" let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-"let g:UltiSnipsExpandTrigger = "<tab>"
-"let g:UltiSnipsJumpForwardTrigger = "<tab>"
-"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsListSnippets = "<c-k>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 "" Other from here
 " General settings
@@ -182,3 +191,20 @@ let g:ycm_server_log_level = 'debug'
 
 set sr fo=roqm1 tw=64
 im <C-B> <C-O>:setl sr! fo<C-R>=strpart("-+",&sr,1)<CR>=tc<CR>_<BS><Right>
+
+" Control-S always saves the file, and, if called from visual mode, restores 
+" the visual selection when done. It does not re-enter insert mode, 
+" though, so I use it as my quit-insert-mode-and-save macro.
+
+" F2 only saves if necessary, and returns the user to insert mode (or 
+" restores their visual selection), as needed.
+nmap <c-s> :w<CR>
+vmap <c-s> <Esc><c-s>gv
+imap <c-s> <Esc><c-s>
+
+nmap <F2> :update<CR>
+vmap <F2> <Esc><F2>gv
+imap <F2> <c-o><F2>
+
+" Set Ultisnips folder
+let g:UltiSnipsSnippetsDir = "~/.vim/bundle/Ultisnips"
