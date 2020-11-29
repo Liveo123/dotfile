@@ -2,22 +2,22 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/liveo/.oh-my-zsh
+export ZSH=/home/poblivsig/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="funky"
+ZSH_THEME="dogenpunk"
 
-# Include z
-. ~/Templates/z.sh
+# Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.html
+eval "$(lua ~/Software/z/z.lua --init zsh)"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
-ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+ZSH_THEME_RANDOM_CANDIDATES=( "dogenpunk" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -102,7 +102,7 @@ export PATH="$PATH:/opt/activator"
 
 # export PIG_HOME=/home/edureka/pig-0.16.0
 export PATH=$PATH:/home/edureka/pig-0.16.0/bin
-export PIG_CLASSPATH=$HADOOP_CONF_DIR
+export PIG_CLASSPATH=$HADOOP_CONF_DIR
 # ****** End to path *********
 
 # Swap eac and CAPS
@@ -154,7 +154,7 @@ alias sagi='sudo apt-get install'
 alias sai='sudo apt install'
 alias sagu='sudo apt update'
 export EDITOR=vim
-alias ssl='ssh liveo@139.162.62.149'
+alias ssl='ssh root@157.230.252.148'
 alias sup='sudo apt-get update && sudo apt-get -y upgrade'
 alias ssu='ssh -X plivesey3@buffet02.cc.gatech.edu'
 alias sa='source venv/bin/activate'
@@ -168,4 +168,5 @@ alias evl='expressvpn preferences set network_lock off'
 alias gsm='gnome system monitor'
 alias rai='cd ~/Dropbox/1. University/8. RAI/'
 alias kbai='cd ~/Dropbox/1. University/7. KBAI'
+
 
