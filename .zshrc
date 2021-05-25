@@ -9,6 +9,12 @@ export ZSH=/home/poblivsig/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="dogenpunk"
 
+# Stuff for zsh-z which can be found here:
+# https://github.com/agkozak/zsh-z
+source /Users/paullivesey/Software/zsh-z/zsh-z.plugin.zsh
+autoload -U compinit && compinit
+zstyle ':completion:*' menu select
+
 # Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.html
 eval "$(lua ~/Software/z/z.lua --init zsh)"
 
