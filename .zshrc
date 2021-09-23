@@ -1,8 +1,37 @@
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=3000
+SAVEHIST=3000
+setopt notify
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/liveo13/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/poblivsig/.oh-my-zsh
+
+# Allow settings in i3
+export XDG_CURRENT_DESKTOP=GNOME
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -11,12 +40,12 @@ ZSH_THEME="dogenpunk"
 
 # Stuff for zsh-z which can be found here:
 # https://github.com/agkozak/zsh-z
-source /Users/paullivesey/Software/zsh-z/zsh-z.plugin.zsh
+source /plugins/zsh-z/zsh-z.plugin.zsh
 autoload -U compinit && compinit
 zstyle ':completion:*' menu select
 
 # Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.html
-eval "$(lua ~/Software/z/z.lua --init zsh)"
+# eval "$(lua ~/Software/z/z.lua --init zsh)"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -71,7 +100,6 @@ plugins=(
   git
 )
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -156,13 +184,10 @@ alias spi2='sudo pip2 install'
 alias soz='source ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
-alias sagi='sudo apt-get install'
-alias sai='sudo apt install'
-alias sagu='sudo apt update'
+alias paci='sudo pacman -S'
+alias pacu='sudo pacman -Syu'
 export EDITOR=vim
 alias ssl='ssh root@157.230.252.148'
-alias sup='sudo apt-get update && sudo apt-get -y upgrade'
-alias ssu='ssh -X plivesey3@buffet02.cc.gatech.edu'
 alias sa='source venv/bin/activate'
 alias venvy='python3 -m virualenv venv'
 alias srcvenv='source venv/bin/activate'
@@ -172,7 +197,5 @@ alias evs='expressvpn status'
 alias ev='expressvpn'
 alias evl='expressvpn preferences set network_lock off'
 alias gsm='gnome system monitor'
-alias rai='cd ~/Dropbox/1. University/8. RAI/'
-alias kbai='cd ~/Dropbox/1. University/7. KBAI'
-
-
+alias ga='cd ~/Dropbox/1. University/8. RAI/'
+alias dl='cd ~/Dropbox/1. University/7. KBAI'
