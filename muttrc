@@ -1,0 +1,17 @@
+set folder = "imaps://liveo13@vivaldi.net@imap.vivaldi.net:993"
+set smtp_url = "smtp://liveo13@vivaldi.net@smtp.vivaldi.net:587"
+
+set from = "liveo13@vivaldi.net"
+set realname = "Pob Livsig"
+
+set smtp_pass = "P8s83w130VI!"
+set imap_pass = "P8s83w130VI!"
+
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+
+source color.muttrc .config/mutt
+
+mailboxes =INBOX =Sent =Trash =Drafts =Junk =Other
