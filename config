@@ -210,3 +210,11 @@ exec i3-config-wizard
 ## Moving workspaces between screens
 bindsym $mod+p move workspace to output right
 
+## The following swaps esc and caps lock.  May need to change $DISPLAY number
+# The following should be contained in swapkeys which is on $PATH:
+# remove Lock = Caps_Lock
+# keycode 0x42 = Escape
+# keycode 0x9 = Caps_Lock
+# add Lock = Caps_Lock
+xmodmap swapkeys -display :1
+
