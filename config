@@ -206,3 +206,7 @@ bar {
 # Please remove the following exec line:
 #######################################################################
 exec i3-config-wizard
+
+## Moving workspaces between screens
+bindsym $mod+p move workspace to output right
+
