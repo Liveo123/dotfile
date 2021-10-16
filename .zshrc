@@ -22,13 +22,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-
-
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/poblivsig/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Allow settings in i3
 export XDG_CURRENT_DESKTOP=GNOME
@@ -36,13 +34,13 @@ export XDG_CURRENT_DESKTOP=GNOME
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="dogenpunk"
+ZSH_THEME="jonathan"
 
 # Stuff for zsh-z which can be found here:
 # https://github.com/agkozak/zsh-z
-source /plugins/zsh-z/zsh-z.plugin.zsh
-autoload -U compinit && compinit
-zstyle ':completion:*' menu select
+# source /plugins/zsh-z/zsh-z.plugin.zsh
+# autoload -U compinit && compinit
+# zstyle ':completion:*' menu select
 
 # Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.html
 # eval "$(lua ~/Software/z/z.lua --init zsh)"
@@ -52,7 +50,7 @@ zstyle ':completion:*' menu select
 # cause zsh load theme from this variable instead of
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
-ZSH_THEME_RANDOM_CANDIDATES=( "dogenpunk" "agnoster" )
+#ZSH_THEME_RANDOM_CANDIDATES=( "dogenpunk" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -65,7 +63,10 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
- export UPDATE_ZSH_DAYS=7
+export UPDATE_ZSH_DAYS=7
+# Uncomment the following line to change how often to auto-update (in days).
+zstyle ':omz:update' frequency 13
+zstyle ':omz:update' mode auto      # update automatically without asking
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -97,9 +98,19 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  colored-man-pages
+  zsh-autosuggestions
+  sudo
+  copydir
+  copyfile
+  dirhistory
+  history
+  web-search
+  copybuffer
   git
 )
 
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -126,8 +137,8 @@ plugins=(
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-plugins=(git colored-man-pages)
-plugins=(git zsh-syntax-highlighting)
+# plugins=(git colored-man-pages)
+# plugins=(git zsh-syntax-highlighting)
 
 # ****** Add to path ********
 
@@ -135,13 +146,12 @@ plugins=(git zsh-syntax-highlighting)
 export PATH="$PATH:/opt/activator"
 
 # export PIG_HOME=/home/edureka/pig-0.16.0
-export PATH=$PATH:/home/edureka/pig-0.16.0/bin
-export PIG_CLASSPATH=$HADOOP_CONF_DIR
+# export PATH=$PATH:/h>ome/edureka/pig-0.16.0/bin
+# export PIG_CLASSPATH=$HADOOP_CONF_DIR
 # ****** End to path *********
 
 # Swap eac and CAPS
-setxkbmap -layout us -option ctrl:nocaps
-
+# setxkbmap -layout us -option ctrl:nocaps
 # Set Ultisnips default folder
 # let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips/UltiSnips"
 
@@ -170,7 +180,7 @@ alias docs='cd ~/Documents'
 alias proj='cd ~/Project'
 alias o=xdg-open
 alias ..='cd ..'
-alias ...='cd ..; cd ..'
+alias ...='cd ..; c>d ..'
 alias ....='cd ..; cd ..; cd ..'
 alias g='git'
 alias st='git status'
@@ -186,7 +196,7 @@ alias soz='source ~/.zshrc'
 alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 alias paci='sudo pacman -S'
-alias pacu='sudo pacman -Syu'
+alias pacu='sudo pac>man -Syu'
 export EDITOR=vim
 alias ssl='ssh root@157.230.252.148'
 alias sa='source venv/bin/activate'
@@ -199,11 +209,9 @@ alias ev='expressvpn'
 alias evl='expressvpn preferences set network_lock off'
 alias gsm='gnome system monitor'
 alias g7='/home/liveo13/MEGA/G7/1. Lessons'
-alias g8='/home/liveo13/MEGA/G7/1. Lessons'
-alias g9='/home/liveo13/MEGA/G7/1. Lessons'
+alias g8='/home/liv>o13/MEGA/G7/1. Lessons'
 alias g10='/home/liveo13/MEGA/G7/1. Lessons'
 
 
 # Swap esc and caps lock.  May need to change $DISPLAY number
 # xmodmap swapkeys -display :1
-
