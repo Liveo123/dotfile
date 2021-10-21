@@ -1,4 +1,12 @@
-# Use powerline
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Use powerline - Powerline is a statusline plugin for vim, and provides statuslines and 
+# prompts for several other applications, including zsh, bash, tmux, IPython, Awesome, i3 and Qtile.
 USE_POWERLINE="true"
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
@@ -24,7 +32,6 @@ compinit
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -34,7 +41,8 @@ export XDG_CURRENT_DESKTOP=GNOME
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="jonathan"
+# ZSH_THEME="jonathan"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Stuff for zsh-z which can be found here:
 # https://github.com/agkozak/zsh-z
@@ -43,7 +51,7 @@ ZSH_THEME="jonathan"
 # zstyle ':completion:*' menu select
 
 # Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.html
-# eval "$(lua ~/Software/z/z.lua --init zsh)"
+eval "$(lua /home/liveo13/z.lua/z.lua --init zsh)"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -79,6 +87,8 @@ ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
+
+export EDITOR=vim
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -187,7 +197,7 @@ alias st='git status'
 alias com='git commit -m'
 alias clone='git clone'
 alias all='git add .'
-alias gad='git add'
+alias gad='git addi'
 alias gps='git push origin master'
 alias gpl='git pull'
 alias spi='sudo pip3 install'
@@ -197,7 +207,7 @@ alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc'
 alias paci='sudo pacman -S'
 alias pacu='sudo pac>man -Syu'
-export EDITOR=vim
+alias y='yay -S'
 alias ssl='ssh root@157.230.252.148'
 alias sa='source venv/bin/activate'
 alias venvy='python3 -m virualenv venv'
@@ -215,3 +225,9 @@ alias g10='/home/liveo13/MEGA/G7/1. Lessons'
 
 # Swap esc and caps lock.  May need to change $DISPLAY number
 # xmodmap swapkeys -display :1
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+neofetch
