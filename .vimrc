@@ -10,7 +10,535 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-"--------------- Make Vim look good -----------------------
+"--------------- Make V# Use powerline
+2
+USE_POWERLINE="true"
+3
+# Source manjaro-zsh-configuration
+4
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+5
+  source /usr/share/zsh/manjaro-zsh-config
+6
+fi
+7
+# Use manjaro zsh prompt
+8
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+9
+  source /usr/share/zsh/manjaro-zsh-prompt
+10
+fi
+11
+# Lines configured by zsh-newuser-install
+12
+HISTFILE=~/.histfile
+13
+HISTSIZE=3000
+14
+SAVEHIST=3000
+15
+setopt notify
+16
+bindkey -v
+17
+# End of lines configured by zsh-newuser-install
+18
+# The following lines were added by compinstall
+19
+zstyle :compinstall filename '/home/liveo13/.zshrc'
+20
+​
+21
+autoload -Uz compinit
+22
+compinit
+23
+# End of lines added by compinstall
+24
+​# Use powerline
+2
+USE_POWERLINE="true"
+3
+# Source manjaro-zsh-configuration
+4
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+5
+  source /usr/share/zsh/manjaro-zsh-config
+6
+fi
+7
+# Use manjaro zsh prompt
+8
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+9
+  source /usr/share/zsh/manjaro-zsh-prompt
+10
+fi
+11
+# Lines configured by zsh-newuser-install
+12
+HISTFILE=~/.histfile
+13
+HISTSIZE=3000
+14
+SAVEHIST=3000
+15
+setopt notify
+16
+bindkey -v
+17
+# End of lines configured by zsh-newuser-install
+18
+# The following lines were added by compinstall
+19
+zstyle :compinstall filename '/home/liveo13/.zshrc'
+20
+​
+21
+autoload -Uz compinit
+22
+compinit
+23
+# End of lines a# Use powerline
+2
+USE_POWERLINE="true"
+3
+# Source manjaro-zsh-configuration
+4
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+5
+  source /usr/share/zsh/manjaro-zsh-config
+6
+fi
+7
+# Use manjaro zsh prompt
+8
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+9
+  source /usr/share/zsh/manjaro-zsh-prompt
+10
+fi
+11
+# Lines configured by zsh-newuser-install
+12
+HISTFILE=~/.histfile
+13
+HISTSIZE=3000
+14
+SAVEHIST=3000
+15
+setopt notify
+16
+bindkey -v
+17
+# End of lines configured by zsh-newuser-install
+18
+# The following lines were added by compinstall
+19
+zstyle :compinstall filename '/home/liveo13/.zshrc'
+20
+​
+21
+autoload -Uz compinit
+22
+compinit
+23
+# End of lines added by compinstall
+24
+​
+25
+# If you come from bash you might have to change your $PATH.
+26
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+27
+​
+28
+# Path to your oh-my-zsh installation.
+29
+export ZSH=$HOME/.oh-my-zsh
+30
+​
+31
+# Allow settings in i3
+32
+export XDG_CURRENT_DESKTOP=GNOME
+33
+​
+34
+# Set name of the theme to load. Optionally, if you set this to "random"
+35
+# it'll load a random theme each time that oh-my-zsh is loaded.
+36
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+37
+ZSH_THEME="jonathan"
+38
+​
+39
+# Stuff for zsh-z which can be found here:
+40
+# https://github.com/agkozak/zsh-z
+41
+# source /plugins/zsh-z/zsh-z.plugin.zsh
+42
+# autoload -U compinit && compinit
+43
+# zstyle ':completion:*' menu select
+44
+​
+45
+# Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.html# Use powerline
+2
+USE_POWERLINE="true"
+3
+# Source manjaro-zsh-configuration
+4
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+5
+  source /usr/share/zsh/manjaro-zsh-config
+6
+fi
+7
+# Use manjaro zsh prompt
+8
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+9
+  source /usr/share/zsh/manjaro-zsh-prompt
+10
+fi
+11
+# Lines configured by zsh-newuser-install
+12
+HISTFILE=~/.histfile
+13
+HISTSIZE=3000
+14
+SAVEHIST=3000
+15
+setopt notify
+16
+bindkey -v
+17
+# End of lines configured by zsh-newuser-install
+18
+# The following lines were added by compinstall
+19
+zstyle :compinstall filename '/home/liveo13/.zshrc'
+20
+​
+21
+autoload -Uz compinit
+22
+compinit
+23
+# End of lines added by compinstall
+24
+​
+25
+# If you come from bash you might have to change your $PATH.
+26# Use powerline
+2
+USE_POWERLINE="true"
+3
+# Source manjaro-zsh-configuration
+4
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+5
+  source /usr/share/zsh/manjaro-zsh-config
+6
+fi
+7
+# Use manjaro zsh prompt
+8
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+9
+  source /usr/share/zsh/manjaro-zsh-prompt
+10
+fi
+11
+# Lines configured by zsh-newuser-install
+12
+HISTFILE=~/.histfile
+13
+HISTSIZE=3000
+14
+SAVEHIST=3000
+15
+setopt notify
+16
+bindkey -v
+17
+# End of lines configured by zsh-newuser-install
+18
+# The following lines were added by compinstall
+19
+zstyle :compinstall filename '/home/liveo13/.zshrc'
+20
+​
+21
+autoload -Uz compinit
+22
+compinit
+23# Use powerline
+2
+USE_POWERLINE="true"
+3
+# Source manjaro-zsh-configuration
+4
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+5
+  source /usr/share/zsh/manjaro-zsh-config
+6
+fi
+7
+# Use manjaro zsh prompt
+8
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+9
+  source /usr/share/zsh/manjaro-zsh-prompt
+10
+fi
+11
+# Lines configured by zsh-newuser-install
+12
+HISTFILE=~/.histfile
+13
+HISTSIZE=3000
+14
+SAVEHIST=3000
+15
+setopt notify
+16
+bindkey -v
+17
+# End of lines configured by zsh-newuser-install
+18
+# The following lines were added by compinstall
+19
+zstyle :compinstall filename '/home/liveo13/.zshrc'
+20
+​
+21
+autoload -Uz compinit
+22
+compinit
+23
+# End of lines added by compinstall
+24
+​
+25
+# If you come from bash you might have to change your $PATH.
+26
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+27
+​
+28
+# Path to your oh-my-zsh installation.
+29
+export ZSH=$HOME/.oh-my-zsh
+30
+​
+31
+# Allow settings in i3
+32
+export XDG_CURRENT_DESKTOP=GNOME
+33
+​
+34
+# Set name of the theme to load. Optionally, if you set this to "random"
+35
+# it'll load a random theme each time that oh-my-zsh is loaded.
+36
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+37
+ZSH_THEME="jonathan"
+38
+​
+39
+# Stuff for zsh-z which can be found here:
+40
+# https://github.com/agkozak/zsh-z
+41
+# source /plugins/zsh-z/zsh-z.plugin.zsh
+42
+# autoload -U compinit && compinit
+43
+# zstyle ':completion:*' menu select
+44
+​
+45
+# Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.html
+# End of lines added by compinstall
+24
+​
+25
+# If you come from bash you might have to change your $PATH.
+26
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+27
+​
+28
+# Path to your oh-my-zsh installation.
+29
+export ZSH=$HOME/.oh-my-zsh
+30
+​
+31
+# Allow settings in i3
+32
+export XDG_CURRENT_DESKTOP=GNOME
+33
+​
+34
+# Set name of the theme to load. Optionally, if you set this to "random"
+35
+# it'll load a random theme each time that oh-my-zsh is loaded.
+36
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+37
+ZSH_THEME="jonathan"
+38
+​
+39
+# Stuff for zsh-z which can be found here:
+40
+# https://github.com/agkozak/zsh-z
+41
+# source /plugins/zsh-z/zsh-z.plugin.zsh
+42
+# autoload -U compinit && compinit
+43
+# zstyle ':completion:*' menu select
+44
+​
+45
+# Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.html
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+27
+​
+28
+# Path to your oh-my-zsh installation.
+29
+export ZSH=$HOME/.oh-my-zsh
+30
+​
+31
+# Allow settings in i3
+32
+export XDG_CURRENT_DESKTOP=GNOME
+33
+​
+34
+# Set name of the theme to load. Optionally, if you set this to "random"
+35
+# it'll load a random theme each time that oh-my-zsh is loaded.
+36
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+37
+ZSH_THEME="jonathan"
+38
+​
+39
+# Stuff for zsh-z which can be found here:
+40
+# https://github.com/agkozak/zsh-z
+41
+# source /plugins/zsh-z/zsh-z.plugin.zsh
+42
+# autoload -U compinit && compinit
+43
+# zstyle ':completion:*' menu select
+44
+​
+45
+# Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.htmldded by compinstall
+24
+​
+25
+# If you come from bash you might have to change your $PATH.
+26
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+27
+​
+28
+# Path to your oh-my-zsh installation.
+29
+export ZSH=$HOME/.oh-my-zsh
+30
+​
+31
+# Allow settings in i3
+32
+export XDG_CURRENT_DESKTOP=GNOME
+33
+​
+34
+# Set name of the theme to load. Optionally, if you set this to "random"
+35
+# it'll load a random theme each time that oh-my-zsh is loaded.
+36
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+37
+ZSH_THEME="jonathan"
+38
+​
+39
+# Stuff for zsh-z which can be found here:
+40
+# https://github.com/agkozak/zsh-z
+41
+# source /plugins/zsh-z/zsh-z.plugin.zsh
+42
+# autoload -U compinit && compinit
+43
+# zstyle ':completion:*' menu select
+44
+​
+45
+# Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.html
+25
+# If you come from bash you might have to change your $PATH.
+26
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+27
+​
+28
+# Path to your oh-my-zsh installation.
+29
+export ZSH=$HOME/.oh-my-zsh
+30
+​
+31
+# Allow settings in i3
+32
+export XDG_CURRENT_DESKTOP=GNOME
+33
+​
+34
+# Set name of the theme to load. Optionally, if you set this to "random"
+35
+# it'll load a random theme each time that oh-my-zsh is loaded.
+36
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+37
+ZSH_THEME="jonathan"
+38
+​
+39
+# Stuff for zsh-z which can be found here:
+40
+# https://github.com/agkozak/zsh-z
+41
+# source /plugins/zsh-z/zsh-z.plugin.zsh
+42
+# autoload -U compinit && compinit
+43
+# zstyle ':completion:*' menu select
+44
+​
+45
+# Include z - https://www.linuxuprising.com/2019/02/zlua-faster-way-of-changing-directories.htmlim look good -----------------------
 Plugin 'tomasr/molokai'
 Plugin 'bling/vim-airline'
 
@@ -42,11 +570,11 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'tpope/vim-liquid'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'ervandew/supertab'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/Ultisnips'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+" Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
@@ -192,11 +720,11 @@ let g:ycm_server_log_level = 'debug'
 set sr fo=roqm1 tw=64
 im <C-B> <C-O>:setl sr! fo<C-R>=strpart("-+",&sr,1)<CR>=tc<CR>_<BS><Right>
 
-" Control-S always saves the file, and, if called from visual mode, restores 
-" the visual selection when done. It does not re-enter insert mode, 
+" Control-S always saves the file, and, if called from visual mode, restores
+" the visual selection when done. It does not re-enter insert mode,
 " though, so I use it as my quit-insert-mode-and-save macro.
 
-" F2 only saves if necessary, and returns the user to insert mode (or 
+" F2 only saves if necessary, and returns the user to insert mode (or
 " restores their visual selection), as needed.
 nmap <c-s> :w<CR>
 vmap <c-s> <Esc><c-s>gv
